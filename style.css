@@ -1,3 +1,139 @@
-h1 {
-    color: blue;
+:root {
+	--color-font: #808080;
+	--color-background: #000000;
+	--view-minmax: calc((100vw - 500px) / (1920 - 500));
 }
+
+body {
+	background: var(--color-background);
+	font-family: "plantc", serif;
+	color: var(--color-font);
+	margin: 0;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-weight: normal;
+}
+h1 {
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h2 {
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+#intro header {
+	display: grid;
+	grid-template-columns: minmax(20%, 330px) 75px minmax(max-content, 1fr) 75px minmax(20%, 300px);
+	grid-template-rows: 176px 55px minmax(max-content, 1fr) 35px 175px;
+	grid-template-areas:
+		". . . . rs"
+		"ls . . . rs"
+		"ls . h1 . rs"
+		"ls . h2 . rs"
+		"ls . h2 . .";
+	transform: translateY(-88px);
+}
+#intro {
+	--size-h1: calc(42px + (88 - 42) * var(--view-minmax));
+	--size-h2: calc(20px + (28 - 20) * var(--view-minmax));
+	min-height: 110vh;
+}
+
+#intro h1 {
+    grid-area: h1;
+    line-height: calc(var(--size-h1) * 1.382);
+    font-size: var(--size-h1);
+    align-self: center;
+    
+} 
+#intro h2 {
+    grid-column-end: rs;
+    grid-area: h2;
+    line-height: calc(var(--size-h2) + 10px);
+    font-size: var(--size-h2);
+
+}
+
+#earth {
+    /* [1] Allow it to contain the absolutely positions pseudo-elements (later-on) */
+    position: relative;
+  
+    /* [2] Set-up the dimensions and spacing */
+    width: 300px;
+    height: 300px;
+    margin: 3em auto;
+  
+    /* [3] Prepare the animation effects */
+    transition: transform 500ms linear;
+    animation: rotate 7s linear infinite; /* This is going to be defined in the next step */
+  
+    /* [4] Tweak the appearance, and give it a nice background i.e. the world map */
+    color: #fff;
+    border-radius: 50%;
+    background: url(earthmap.jpeg);
+    box-shadow: inset 20px 0 80px 6px rgba(0, 0, 0, 1);
+  
+    /* [5] Position things in a 3d space */
+    transform-style: preserve-3d;
+  }
+  #earth:after {
+    /* [1] Break the flow to show this as an overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    /* [2] Make it take all the space available in the box (ahem... globe!) */
+    width: 100%;
+    height: 100%;
+  
+    /* [3] Make sure this has no generated content, as we want this just for fancy purposes */
+    content: '';
+  
+    /* [4] Give it some shape and shadow */
+    border-radius: 50%;
+    box-shadow: -60px 15px 60px 10px rgb(31, 31, 31) inset;
+  }
+  #earth:before {
+    /* [1] Again, break the flow to show this as an overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    /* [2] Again, give it all the available space */
+    width: 100%;
+    height: 100%;
+  
+    /* [3] Duh. */
+    content: '';
+  
+    /* [4] Add some shape and overlay effect to it */
+    opacity: .2;
+    border-radius: 50%;
+    background: radial-gradient(circle at 100px 100px, #fff, #ABEBC6 );
+  }
+
+  @keyframes rotate {
+    0% {background-position: 0 0;}
+    100% {background-position: 630px 0;}
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
