@@ -1,3 +1,5 @@
+* { margin: 0; padding: 0; }
+
 :root {
 	--color-font: #808080;
 	--color-background: #fff;
@@ -51,7 +53,8 @@ section .content p,
 
 /* intro 1 */
 #intro1 header {
-  background-color: black;
+  background-color: #000;
+  color: #9342A6;
 	display: grid;
 	grid-template-columns: minmax(20%, 330px) 75px minmax(max-content, 1fr) 75px minmax(20%, 300px);
 	grid-template-rows: 176px 55px minmax(max-content, 1fr) 35px 175px;
@@ -84,7 +87,7 @@ section .content p,
     font-size: var(--size-h2);
 }
 
-#content p {
+/* #content p {
 	position: relative;
   
 	bottom: 0;
@@ -94,7 +97,98 @@ section .content p,
   height: 100%;
 
   overflow: hidden;
+} */
+
+div {
+  /* margin-top: 20%;
+  margin: 20% auto 0; */
+  width: 300px;
 }
+
+h2, p {
+  text-align: center;
+  margin: 0;
+}
+p{
+  font-size: 10px;
+}
+
+.bg-colors {
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #eee5ac;
+  overflow: auto;
+  animation: colorchange 60s infinite;
+}
+
+
+.lc {
+  width: 90%;
+
+  margin: auto;
+  flex-items: column;
+  
+  @media only screen and (min-width: 50em) {
+    max-width: 50rem;
+  }
+  @media only screen and (min-width: 33.75em) {
+
+  }
+}
+
+
+/* vertical align the items */
+/* .v-align-outer {
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+  /* }
+} */ 
+.v-align-inner {
+  display: inline-block;
+  vertical-align: middle;
+  width: 300px;
+}
+
+
+@keyframes colorchange {
+  0% {
+    background: #000;
+    color: white;
+  }
+  20% {
+    background: #9342A6;
+    color: white;
+  }
+  40% {
+    background: #AA1A10;
+    color: white;
+  }
+  60% {
+    background: #FECF87;
+  }
+  61% {
+    color: #333;
+  }
+  80% {
+    background: #AEE77E;
+  }
+  81% {
+    color: white;
+  }
+  100% {
+    background: #7AD8F5;
+    color: white;
+  }
+}
+
 
 
 
@@ -161,7 +255,7 @@ section .content p,
     100% {background-position: 630px 0;}
   }
 
-  html {
+  /* html {
     scroll-behavior: smooth;
   }
-  
+   */

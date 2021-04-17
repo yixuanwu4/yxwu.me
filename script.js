@@ -1,4 +1,7 @@
+
+
 var header = document.getElementById('intro1');
+
 
 function fadeOutOnScroll(element) {
 	if (!element) {
@@ -25,3 +28,7 @@ function scrollHandler() {
 }
 
 window.addEventListener('scroll', scrollHandler);
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+});
