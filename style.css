@@ -1,6 +1,6 @@
 :root {
 	--color-font: #808080;
-	--color-background: #000000;
+	--color-background: #fff;
 	--view-minmax: calc((100vw - 500px) / (1920 - 500));
 }
 
@@ -19,6 +19,7 @@ h1, h2, p {
     margin-block-end: 0;
     font-weight: normal;
 }
+
 h1 {
     display: block;
     margin-block-start: 0.67em;
@@ -37,7 +38,20 @@ h2 {
     font-weight: bold;
 }
 
-#intro header {
+/* p element under section */
+section > p, 
+section .content p,
+#more h2 {
+	--size-p: calc(22px + (32 - 22) * var(--view-minmax));
+	line-height: calc(var(--size-p) + 12px);
+	font-size: var(--size-p);
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+/* intro 1 */
+#intro1 header {
+  background-color: black;
 	display: grid;
 	grid-template-columns: minmax(20%, 330px) 75px minmax(max-content, 1fr) 75px minmax(20%, 300px);
 	grid-template-rows: 176px 55px minmax(max-content, 1fr) 35px 175px;
@@ -49,26 +63,40 @@ h2 {
 		"ls . h2 . .";
 	transform: translateY(-88px);
 }
-#intro {
+
+#intro1 {
 	--size-h1: calc(42px + (88 - 42) * var(--view-minmax));
 	--size-h2: calc(20px + (28 - 20) * var(--view-minmax));
 	min-height: 110vh;
 }
 
-#intro h1 {
+#intro1 h1 {
     grid-area: h1;
     line-height: calc(var(--size-h1) * 1.382);
     font-size: var(--size-h1);
     align-self: center;
     
 } 
-#intro h2 {
+#intro1 h2 {
     grid-column-end: rs;
     grid-area: h2;
     line-height: calc(var(--size-h2) + 10px);
     font-size: var(--size-h2);
-
 }
+
+#content p {
+	position: relative;
+  
+	bottom: 0;
+
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+
 
 #earth {
     /* [1] Allow it to contain the absolutely positions pseudo-elements (later-on) */
@@ -84,7 +112,7 @@ h2 {
     animation: rotate 7s linear infinite; /* This is going to be defined in the next step */
   
     /* [4] Tweak the appearance, and give it a nice background i.e. the world map */
-    color: #fff;
+    color: #000;
     border-radius: 50%;
     background: url(earthmap.jpeg);
     box-shadow: inset 20px 0 80px 6px rgba(0, 0, 0, 1);
@@ -94,7 +122,7 @@ h2 {
   }
   #earth:after {
     /* [1] Break the flow to show this as an overlay */
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
   
