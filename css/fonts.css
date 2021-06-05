@@ -1,0 +1,12 @@
+
+/* font-family BS */
+@font-face{
+    font-family:Bree_Serif;
+    src: url('../fonts/Bree_Serif/BreeSerif-Regular.ttf');
+}
+
+/* font-family MateSC */
+@font-face{
+    font-family:MateSC;
+    src: url('../fonts/Mate_SC/MateSC-Regular.ttf');
+}
