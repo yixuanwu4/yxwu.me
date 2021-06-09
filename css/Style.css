@@ -17,7 +17,7 @@ html.body{
     --midnight:#53b69a;
 
     /* gradient color (from web https://webgradients.com/)*/
-    --sky: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+    --sky: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
 
 
     /*theme font family*/
@@ -42,6 +42,37 @@ ul{
     list-style-type: none;
 }
 
+h1{
+    font-family: var(--Bree_Serif);
+    font-size: 2.5rem;
+}
+
+h2{
+    font-family: var(--Bree_Serif);
+}
+
+h3{
+    font-family: var(--MateSC);
+    font-size: 1.3rem;
+}
+
+button.btn{
+    border:none;
+    border-radius:2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--MateSC);
+    cursor: pointer;
+}
+
+span{
+    font-family: var(--MateSC);
+}
+
+
+.container{
+    margin:0 5vw;
+}
 /*  --xxxxx----GLobal Classes --------xxxxx------*/
 
 /*---------------- navbar--------*/
@@ -52,6 +83,7 @@ ul{
     height: 0rem;
     min-height: 10vh; /*specify height of nav bar*/
     overflow:hidden;
+    transition: height 1s ease-in-out; /* in the toggle each choice will show/dissapear one by one*/ 
 }
 
 .nav .nav-menu{
@@ -123,6 +155,85 @@ ul{
     color: #52b69a;
 }
 /*-------xxxxxx--------- navbar---xxxxxx-----*/
+
+
+/* ---- Main Content -----*/
+
+/* ---- Site Title -----*/
+main .site-title{
+    background: url("../assets/Background-image.png");
+    background-size: cover;
+    height: 110vh;
+    display:flex;
+    justify-content: center;
+}
+
+main .site-title .site-background{
+    padding-top: 10rem;
+    text-align: center;
+    color:var(--white);
+}
+
+main .site-title h1, h3{
+    margin: .3rem;
+}
+
+main .site-title .btn{
+    margin: 1.8rem;
+    background: var(--sky)
+}
+
+main .site-title .btn:hover{ /*hover on it, change the effect*/
+    background:transparent;
+    border:1px solid var(--white);
+    color:var(--white);
+}
+/* ---x- Site Title ---x--*/
+
+/*----Blog carousel---*/
+main .blog{
+    background: url('../assets/Abract01.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+    background-size:65%;
+}
+
+main .blog .blog-post{
+    padding-top: 6rem;
+}
+
+main .blog-post .blog-content{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+}
+
+main .blog-content .blog-title{
+    padding: 2rem 0;
+}
+
+main .blog-content .bin-blog{
+    padding:.7rem 2rem;
+    background: var(--sky);
+    margin: .5rem;
+}
+
+main .blog-content span{
+    display: block;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover{
+    background:transparent;
+}
+/*--xxx--Blog carousel-xxx--*/
+
+/* --xxx-- Main Content ---xxx--*/
+
  
 /*   Viewpoint less then or equal to 750px*/
 
