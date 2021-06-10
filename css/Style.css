@@ -169,7 +169,7 @@ main .site-title{
     width: 100%;
     background-size:150%;
     display:flex;
-    justify-content:left;
+    justify-content:center;
 }
 
 main .site-title .site-background{
