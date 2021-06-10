@@ -164,7 +164,7 @@ main .site-title{
     background: url("../assets/1080P.svg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: center;
     height: 100vh;
     width: 100%;
     background-size:65%;
