@@ -161,10 +161,13 @@ span{
 
 /* ---- Site Title -----*/
 main .site-title{
-    background: url("../assets/1080P.jpeg");
+    background: url("../assets/1080P.svg");
     background-size: cover;
-    background-position: center;
-    height: 110vh;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+    background-size:65%;
     display:flex;
     justify-content:left;
 }
@@ -172,7 +175,7 @@ main .site-title{
 main .site-title .site-background{
     padding-top: 10rem;
     text-align: center;
-    color:var(--white);
+    color:#F08080;
 }
 
 main .site-title h1, h3{
