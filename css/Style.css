@@ -163,9 +163,10 @@ span{
 main .site-title{
     background: url("../assets/1080P.jpeg");
     background-size: cover;
+    background-position: center;
     height: 110vh;
     display:flex;
-    justify-content:right;
+    justify-content:left;
 }
 
 main .site-title .site-background{
