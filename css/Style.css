@@ -1,6 +1,16 @@
 
 @import url('../css/fonts.css');
 
+canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+  }
+  
+
 html.body{
     margin: 0%;
     box-sizing: border-box;
@@ -14,7 +24,7 @@ html.body{
     --text-light: #686666da;
     --bg-color:#0f0f0f;
     --white:#ffffff;
-    --midnight:#53b69a;
+    --midnight:#168aad;
 
     /* gradient color (from web https://webgradients.com/)*/
     --sky: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
@@ -48,7 +58,8 @@ h1{
 }
 
 h2{
-    font-family: var(--Bree_Serif);
+    font-family: var(--MateSC);
+    
 }
 
 h3{
@@ -152,7 +163,7 @@ span{
 }
 
 .nav .social i:hover{
-    color: #52b69a;
+    color: #168aad;
 }
 /*-------xxxxxx--------- navbar---xxxxxx-----*/
 
@@ -161,7 +172,7 @@ span{
 
 /* ---- Site Title -----*/
 main .site-title{
-    background: url("../assets/1080P.png");
+    /* background: url("../assets/Blog-post/post-10.jpg"); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -183,18 +194,20 @@ main .site-title h1, h3{
 }
 
 main .site-title .btn{
-    margin: 1.8rem;
+    color:khaki;
+    margin: 0.8rem;
     background: transparent;
 }
 
 main .site-title .btn:hover{ /*hover on it, change the effect*/
-    background:#FBC4AB;
+    /*background:#fbabcc;*/
     border:1px solid var(--white);
-    color:var(--white);
+    font-weight: bold;
+    color:#ffa69e;
 }
 /* ---x- Site Title ---x--*/
 
-/*----Blog carousel---*/
+/* ----Blog carousel---
 main .blog{
     background: url('../assets/Abract01.png');
     background-repeat: no-repeat;
@@ -232,9 +245,49 @@ main .blog-content span{
 }
 
 .owl-theme .owl-nav [class*='owl-']:hover{
-    background:transparent;
-}
-/*--xxx--Blog carousel-xxx--*/
+    background:transparent; }*/
+
+
+
+/*--xxx--My Paintings -xxx--*/
+
+    div.gallery {
+      margin: 5px;
+      border: 1px solid #ccc;
+      float: left;
+      width: 180px;
+    }
+    
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+    
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+    
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+
+
+/*--xxx-- My background -xxx*/
+    .content-center {
+        display:flex;
+        justify-content: center;
+    }
+
+    .content {
+        display:flex;
+        justify-content: left;
+        background: white;
+        padding: 50px;
+        border-radius: 3px;
+        margin-bottom: 10px;
+        border-radius: 25px;
+    }
 
 /* --xxx-- Main Content ---xxx--*/
 
@@ -252,3 +305,4 @@ main .blog-content span{
 } /*create a responsive web*/
 
 /*  x     Viewpoint less then or equal to 750px     x    */
+

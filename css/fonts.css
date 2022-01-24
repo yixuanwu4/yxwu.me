@@ -10,3 +10,9 @@
     font-family:MateSC;
     src: url('../fonts/Mate_SC/MateSC-Regular.ttf');
 }
+
+/* font-family Architects_Daughter */
+@font-face{
+    font-family:Architects_Daughter;
+    src: url('../fonts/Architects_Daughter/ArchitectsDaughter-Regular.ttf');
+}
