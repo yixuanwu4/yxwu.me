@@ -12,6 +12,7 @@ $(document).ready(function(){
 });
 
 
+
   // Set our main variables
   let scene,
   container,
@@ -25,6 +26,7 @@ $(document).ready(function(){
   let windowHalfX = window.innerWidth / 2;
   let windowHalfY = window.innerHeight / 2;
   const MODEL_PATH = 'human.glb';
+  
   const canvas = document.querySelector('#c');
   const backgroundColor = 0xf1f1f1;
 
@@ -72,7 +74,7 @@ $(document).ready(function(){
 
     model.position.y = - 11;
     scene.add( model );
-    model.scale.set(0.1, 0.1, 0.1);}
+  }
     const manager = new THREE.LoadingManager( loadModel );
 
     manager.onProgress = function ( item, loaded, total ) {
@@ -88,27 +90,10 @@ $(document).ready(function(){
   function onError() {}
 
 
-
-    // Add a camera
-
-
-    function onError() {}
-
     const loader = new THREE.GLTFLoader();
 
     loader.load(MODEL_PATH, function (gltf) {
       model = gltf.scene;
-
-      model.traverse(o => {
-
-        if (o.isMesh) {
-          o.castShadow = true;
-          o.receiveShadow = true;
-          
-        }
-        
-       
-      }, onProgress, onError);
       
 
       model.scale.set(10, 10, 10);
@@ -117,16 +102,12 @@ $(document).ready(function(){
       scene.add(model);
 
     },
-    undefined, // We don't need this function
+    undefined, 
     function (error) {
       console.error(error);
     });
 
   // Init the renderer
-  
-
-
-
   renderer = new THREE.WebGLRenderer();
   renderer.setPixelRatio( window.devicePixelRatio );
   renderer.setSize( window.innerWidth, window.innerHeight );
@@ -134,10 +115,7 @@ $(document).ready(function(){
 
   document.addEventListener( 'mousemove', onDocumentMouseMove );
 
-        //
-
-        window.addEventListener( 'resize', onWindowResize );
-
+  window.addEventListener( 'resize', onWindowResize );
 
   }
 
