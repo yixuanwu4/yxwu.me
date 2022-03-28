@@ -9,9 +9,13 @@ canvas {
     left: 0;
     z-index: -9999;
   }
-  
+
+  body {
+    background-color: #FFFCF5;
+  }
 
 html.body{
+    background: #FFFCF5;
     margin: 0%;
     box-sizing: border-box;
     overflow-x: hidden;
@@ -33,12 +37,14 @@ html.body{
     /*theme font family*/
     --MateSC: 'MateSC', cursive;/* create the value for using multiple times*/
     --Bree_Serif: 'Bree_Serif', cursive;
+    --Alegreya: 'Alegreya', cursive;
 }
 
 /*  -------GLobal Classes --------------*/
 
 a{
     text-decoration:none;
+    
     color:var(--text-gray);
 }
 
@@ -53,17 +59,17 @@ ul{
 }
 
 h1{
-    font-family: var(--Bree_Serif);
+    font-family: var(--Alegreya);
     font-size: 2.5rem;
 }
 
 h2{
-    font-family: var(--MateSC);
+    font-family: var(--Alegreya);
     
 }
 
 h3{
-    font-family: var(--MateSC);
+    font-family: var(--Alegreya);
     font-size: 1.3rem;
 }
 
@@ -89,7 +95,7 @@ span{
 /*---------------- navbar--------*/
 
 .nav{
-    background: white;
+    background: #FFFCF5;
     padding:0 2rem;
     height: 0rem;
     min-height: 10vh; /*specify height of nav bar*/
@@ -134,23 +140,23 @@ span{
     padding: 1.6rem 1rem;
     font-size: 1.1rem;
     position:relative;
-    font-family: var(--MateSC);
+    font-family: var(--Alegreya);
     font-size: 1.1rem;
 }
 
 .nav .nav-items .nav-link:hover{
-    background-color: var(--midnight);
+    background-color: #FFD666;
 }
 
 .nav .nav-items .nav-link:hover a{
-    color:var(--white);
+    color:white;
 }
 
 .nav .nav-brand a{
     font-size: 1.6rem;
     padding: 1rem 0;
     display: block;
-    font-family:var(--MateSC); 
+    font-family:var(--Alegreya); 
     font-size: 1.6rem;
 }
 
@@ -163,7 +169,7 @@ span{
 }
 
 .nav .social i:hover{
-    color: #168aad;
+    color: #FDC830;
 }
 /*-------xxxxxx--------- navbar---xxxxxx-----*/
 
@@ -184,9 +190,8 @@ main .site-title{
 }
 
 main .site-title .site-background{
-    padding-top: 10rem;
-    text-align: center;
-    color:#F08080;
+    height: 100%; 
+    width: 100%;
 }
 
 main .site-title h1, h3{
@@ -252,6 +257,7 @@ main .blog-content span{
 /*--xxx--My Paintings -xxx--*/
 
     div.gallery {
+      
       margin: 5px;
       border: 1px solid #ccc;
       float: left;
@@ -275,6 +281,7 @@ main .blog-content span{
 
 /*--xxx-- My background -xxx*/
     .content-center {
+        background: #FFFCF5;
         display:flex;
         justify-content: center;
     }
@@ -282,7 +289,7 @@ main .blog-content span{
     .content {
         display:flex;
         justify-content: left;
-        background: white;
+        background: #FFFCF5;
         padding: 50px;
         border-radius: 3px;
         margin-bottom: 10px;

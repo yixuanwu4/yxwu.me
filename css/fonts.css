@@ -16,3 +16,8 @@
     font-family:Architects_Daughter;
     src: url('../fonts/Architects_Daughter/ArchitectsDaughter-Regular.ttf');
 }
+
+@font-face{
+    font-family: Alegreya;
+    src: url('../fonts/Alegreya/Alegreya-VariableFont_wght.ttf')
+}
